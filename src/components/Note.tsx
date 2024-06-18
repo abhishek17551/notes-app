@@ -4,7 +4,10 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Badge, Button, Col, Row, Stack } from 'react-bootstrap'
 import ReactMarkdown from "react-markdown"
 
-const Note = () => {
+type NoteProps = {
+    onDelete : (id:string) => void
+}
+const Note = ({onDelete}:NoteProps) => {
     const note = useNote()
     const navigate = useNavigate()
   return (
@@ -29,6 +32,7 @@ const Note = () => {
           </Link>
           <Button
             onClick={() => {
+              onDelete(note.id)
               navigate("/")
             }}
             variant="outline-danger"

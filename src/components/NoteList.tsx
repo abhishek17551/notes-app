@@ -34,7 +34,7 @@ const NoteList = ({availableTags,notes} : NoteListProps) => {
                     <Link to='/new'>
                     <Button variant="primary">Create</Button>
                     </Link>
-                    <Button variant="outline-secondary">Edit Tags</Button>
+                    
                 </Stack>
             </Col>
         </Row>
